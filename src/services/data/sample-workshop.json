@@ -1,0 +1,14 @@
+{
+    "name": "Express JS",
+    "category": "backend",
+    "startDate": "2022-07-31",
+    "endDate": "2022-08-03",
+    "startTime": {
+        "hours": 9,
+        "minutes": 30
+    },
+    "endTime": {
+        "hours": 12,
+        "minutes": 30
+    }
+}

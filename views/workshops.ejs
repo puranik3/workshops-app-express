@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>List of Workshops | <%= title %></title>
+        <link rel="stylesheet" href="/external/bootstrap/css/bootstrap.min.css">
+    </head>
+    <body>
+        <main class="container my-5">
+            <h1>List of workshops</h1>
+            <hr />
+            <div class="row">
+                <% workshops.forEach( workshop => { %>
+                    <div class="col-12 col-lg-4 d-flex my-4">
+                        <div class="card w-100 p-3">
+                            <img src="<%= workshop.imageUrl %>" class="card-img-top" alt="<%= workshop.name %>" />
+                            <div class="card-body">
+                                <h5 class="card-title"><%= workshop.name %></h5>
+                                <p class="card-text">
+                                    <%= workshop.startDate.toString().substr( 0, 10 ) %>
+                                    -
+                                    <%= workshop.endDate.toString().substr( 0, 10 ) %>
+
+                                    <% if( workshop.modes.online ) { %>
+                                        <span class="badge bg-primary">online</span>
+                                    <% } %>
+                                    
+                                    <% if( workshop.modes.inPerson ) { %>
+                                        <span class="badge bg-success">classroom</span>
+                                    <% } %>
+                                </p>
+                                <a href="/workshops/<%= workshop.id %>" class="btn btn-primary">View details</a>
+                            </div>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+        </main>
+
+        <script src="/external/bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html>

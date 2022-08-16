@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Details of <%= workshop.name %> | <%= title %></title>
+        <link rel="stylesheet" href="/external/bootstrap/css/bootstrap.min.css">
+    </head>
+    <body>
+        <main class="container my-5">
+            <h1><%= workshop.name %></h1>
+            <hr />
+            <div class="row">
+                <div class="col-12 col-lg-4">
+                    <img src="<%= workshop.imageUrl %> " alt="<%= workshop.name %>" class="img-fluid" />
+                </div>
+                <div class="col-12 col-lg-8">
+                    <%- workshop.description %>
+                </div>
+            </div>
+        </main>
+
+        <script src="/external/bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html>
