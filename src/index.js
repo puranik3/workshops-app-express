@@ -29,7 +29,11 @@ const env = process.env.NODE_ENV;
 let origin = 'http://localhost:3001';
 
 if( env === 'production' ) {
-    origin = [ 'https://workshops-app-vue.herokuapp.com', 'https://workshops-app-fynd.s3.amazonaws.com' ];
+    origin = [
+        'https://workshops-app-vue.herokuapp.com',
+        'https://workshops-app-fynd.s3.amazonaws.com',
+        'http://workshops-app-fynd.s3-website-us-east-1.amazonaws.com/'
+    ];
 }
 
 app.use(cors({
