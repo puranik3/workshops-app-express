@@ -25,8 +25,15 @@ const {
 // Application object (has a web server within)
 const app = express();
 
+const env = process.env.NODE_ENV;
+let origin = 'http://localhost:3001';
+
+if( env === 'production' ) {
+    origin = 'https://workshops-app-vue.herokuapp.com';
+}
+
 app.use(cors({
-    origin: 'http://localhost:3001',
+    origin,
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }));
 
