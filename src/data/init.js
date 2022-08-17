@@ -10,11 +10,9 @@ const dbHost = process.env.DB_HOST;
 
 const env = process.env.NODE_ENV;
 
-let uri;
+let uri = '';
 
-if( env === 'development' ) {
-    uri = "";
-} else if( env === 'production' ) {
+if( env === 'production' ) {
     uri = `--uri="mongodb+srv://${dbUser}:${dbPassword}@${dbHost}/workshopsDB?ssl=true&authSource=admin"`;
 } 
 
