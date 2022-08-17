@@ -1,0 +1,36 @@
+[
+    {
+        "_id": {
+            "$oid": "100000000000000000000001"
+        },
+        "name": "Express JS",
+        "category": "backend",
+        "startDate": "2022-07-31",
+        "endDate": "2022-08-03",
+        "startTime": {
+            "hours": 9,
+            "minutes": 30
+        },
+        "endTime": {
+            "hours": 12,
+            "minutes": 30
+        }
+    },
+    {
+        "_id": {
+            "$oid": "100000000000000000000002"
+        },
+        "name": "Vue JS",
+        "category": "frontend",
+        "startDate": "2022-08-31",
+        "endDate": "2022-09-03",
+        "startTime": {
+            "hours": 9,
+            "minutes": 0
+        },
+        "endTime": {
+            "hours": 13,
+            "minutes": 30
+        }
+    }
+]
